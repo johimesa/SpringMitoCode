@@ -9,14 +9,13 @@
 		<property name="name" value="Hilario"></property>
 		<property name="alias" value="johi"></property>
 	</bean>
-	
+
 	<bean id="pais" class="com.johimesa.beans.Pais">
 		<property name="name" value="Perú"></property>
-		<property name="city" ref="ciudad"></property>
+		<property name="city">
+			<bean id="ciudad" class="com.johimesa.beans.Ciudad">
+				<property name="name" value="Lima"></property>
+			</bean>
+		</property>
 	</bean>
-	
-	<bean id="ciudad" class="com.johimesa.beans.Ciudad">
-		<property name="name" value="Lima"></property>
-	</bean>
-
 </beans>
