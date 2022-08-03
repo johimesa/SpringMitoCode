@@ -12,11 +12,23 @@
 
 	<bean id="pais" class="com.johimesa.beans.Pais">
 		<property name="name" value="Perú"></property>
-		<property name="city">
-			<bean id="ciudad" class="com.johimesa.beans.Ciudad">
-				<property name="name" value="Lima"></property>
-			</bean>
+		<property name="cities">
+			<list>
+				<ref bean="ciudad1"/>
+				<ref bean="ciudad2"/>
+				<ref bean="ciudad3"/>
+			</list>
 		</property>
+	</bean>
+	
+	<bean id="ciudad1" class="com.johimesa.beans.Ciudad">
+		<property name="name" value="Lima"></property>
+	</bean>
+	<bean id="ciudad2" class="com.johimesa.beans.Ciudad">
+		<property name="name" value="Chiclayo"></property>
+	</bean>
+	<bean id="ciudad3" class="com.johimesa.beans.Ciudad">
+		<property name="name" value="Arequipa"></property>
 	</bean>
 	
 	<alias name="persona" alias="personaAlias"/>

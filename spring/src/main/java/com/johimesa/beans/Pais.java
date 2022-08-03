@@ -1,10 +1,12 @@
 package com.johimesa.beans;
 
+import java.util.List;
+
 public class Pais {
 	
 	private String name;
 	
-	private Ciudad city;
+	private List<Ciudad> cities;
 
 	public String getName() {
 		return name;
@@ -14,16 +16,16 @@ public class Pais {
 		this.name = name;
 	}
 
-	public Ciudad getCity() {
-		return city;
+	public List<Ciudad> getCities() {
+		return cities;
 	}
 
-	public void setCity(Ciudad city) {
-		this.city = city;
+	public void setCities(List<Ciudad> cities) {
+		this.cities = cities;
 	}
 
 	@Override
 	public String toString() {
-		return "Pais [name=" + name + ", city=" + city + "]";
+		return "Pais [name=" + name + ", cities=" + cities + "]";
 	}
 }
