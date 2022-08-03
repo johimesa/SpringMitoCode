@@ -6,20 +6,8 @@ public class Persona {
 	private String name;
 	private String alias;
 	
-	public Persona(int id, String name, String alias) {
-		this.id = id;
-		this.name = name;
-		this.alias = alias;
-	}
+	private Pais paiss;
 	
-	public Persona(int id) {
-		this.id = id;
-	}
-	
-	public Persona(String alias) {
-		this.alias = alias;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -44,8 +32,16 @@ public class Persona {
 		this.alias = alias;
 	}
 
+	public Pais getPaiss() {
+		return paiss;
+	}
+
+	public void setPaiss(Pais paiss) {
+		this.paiss = paiss;
+	}
+
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", name=" + name + ", alias=" + alias + "]";
+		return "Persona [id=" + id + ", name=" + name + ", alias=" + alias + ", paiss=" + paiss + "]";
 	}
 }
