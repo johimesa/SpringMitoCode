@@ -2,26 +2,18 @@ package com.johimesa.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.johimesa.beans.AppConfig;
-import com.johimesa.beans.AppConfig2;
-import com.johimesa.beans.Mundo;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.johimesa.beans.Persona;
 
 public class App {
 
 	public static void main(String[] args) {
 		
-		//ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-		//ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class, AppConfig2.class);
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring/xml/beans.xml");
 		
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-		context.register(AppConfig.class);
-		context.register(AppConfig2.class);
-		context.refresh();
+		Persona p = (Persona)context.getBean("persona");
 		
-		Mundo m = (Mundo)context.getBean("mundo2");
-		
-		System.out.println(m.getSaludo());
+		System.out.println(p);
 		
 		((ConfigurableApplicationContext)context).close();
 	}
