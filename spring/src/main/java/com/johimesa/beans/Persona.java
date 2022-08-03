@@ -7,6 +7,7 @@ public class Persona {
 	private String alias;
 	
 	private Pais paiss;
+	private Ciudad ciudad;
 	
 	public int getId() {
 		return id;
@@ -40,8 +41,17 @@ public class Persona {
 		this.paiss = paiss;
 	}
 
+	public Ciudad getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
+	}
+
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", name=" + name + ", alias=" + alias + ", paiss=" + paiss + "]";
+		return "Persona [id=" + id + ", name=" + name + ", alias=" + alias + ", paiss=" + paiss + ", ciudad=" + ciudad
+				+ "]";
 	}
 }

@@ -6,8 +6,6 @@ public class Pais {
 	
 	private String name;
 	
-	private List<Ciudad> cities;
-
 	public String getName() {
 		return name;
 	}
@@ -16,16 +14,8 @@ public class Pais {
 		this.name = name;
 	}
 
-	public List<Ciudad> getCities() {
-		return cities;
-	}
-
-	public void setCities(List<Ciudad> cities) {
-		this.cities = cities;
-	}
-
 	@Override
 	public String toString() {
-		return "Pais [name=" + name + ", cities=" + cities + "]";
+		return "Pais [name=" + name + "]";
 	}
 }

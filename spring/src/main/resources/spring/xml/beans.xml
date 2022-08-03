@@ -3,33 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" class="com.johimesa.beans.Persona" name="personaBean">
-		<property name="paiss" ref="pais"></property>
+	<bean id="persona" class="com.johimesa.beans.Persona" name="personaBean" autowire="byName">
 		<property name="id" value="1"></property>
 		<property name="name" value="Hilario"></property>
 		<property name="alias" value="johi"></property>
 	</bean>
-
+	
 	<bean id="pais" class="com.johimesa.beans.Pais">
 		<property name="name" value="Perú"></property>
-		<property name="cities">
-			<list>
-				<ref bean="ciudad1"/>
-				<ref bean="ciudad2"/>
-				<ref bean="ciudad3"/>
-			</list>
-		</property>
 	</bean>
 	
-	<bean id="ciudad1" class="com.johimesa.beans.Ciudad">
+	<bean id="ciudad" class="com.johimesa.beans.Ciudad">
 		<property name="name" value="Lima"></property>
 	</bean>
-	<bean id="ciudad2" class="com.johimesa.beans.Ciudad">
-		<property name="name" value="Chiclayo"></property>
-	</bean>
-	<bean id="ciudad3" class="com.johimesa.beans.Ciudad">
-		<property name="name" value="Arequipa"></property>
-	</bean>
 	
-	<alias name="persona" alias="personaAlias"/>
 </beans>
