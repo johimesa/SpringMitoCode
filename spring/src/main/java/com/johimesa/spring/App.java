@@ -24,5 +24,4 @@ public class App {
 		
 		((ConfigurableApplicationContext)context).close();
 	}
-
 }

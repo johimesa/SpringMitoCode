@@ -3,9 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- default-init-method="inicio" default-destroy-method="destruye"> esto para q afecte a todos los beans q tengan esos métodos en sus POJO -->
-
-	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
-
+	
 	<bean id="persona" class="com.johimesa.beans.Persona" autowire="byName">
 		<property name="alias" value="johimesa"></property>
 	</bean>

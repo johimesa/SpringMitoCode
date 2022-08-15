@@ -3,7 +3,10 @@ package com.johimesa.beans;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Persona {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Persona implements InitializingBean, DisposableBean {
 	
 	private int id;
 	private String name;
@@ -11,18 +14,6 @@ public class Persona {
 	
 	private Pais paiss;
 	private Ciudad ciudad;
-	
-	@PostConstruct
-	private void inicio() {
-		System.out.println("Antes de iniciar el bean Persona");
-	}
-	
-	@PreDestroy
-	private void destruye() {
-		System.out.println("A punto de destruir el bean Persona");
-		// para q esto funcione la línea a continuación es muy importante
-		// ((ConfigurableApplicationContext)context).close();
-	}
 	
 	public int getId() {
 		return id;
@@ -69,4 +60,14 @@ public class Persona {
 		return "Persona [id=" + id + ", name=" + name + ", alias=" + alias + ", paiss=" + paiss + ", ciudad=" + ciudad
 				+ "]";
 	}
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Justo después de instanciar el bean Persona");
+	}
+	
+	public void destroy() throws Exception {
+		System.out.println("A punto de destruir el bean Persona");
+	}
+	
+	
 }
