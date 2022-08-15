@@ -1,5 +1,8 @@
 package com.johimesa.beans;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Persona {
 	
 	private int id;
@@ -9,10 +12,12 @@ public class Persona {
 	private Pais paiss;
 	private Ciudad ciudad;
 	
+	@PostConstruct
 	private void inicio() {
 		System.out.println("Antes de iniciar el bean Persona");
 	}
 	
+	@PreDestroy
 	private void destruye() {
 		System.out.println("A punto de destruir el bean Persona");
 		// para q esto funcione la línea a continuación es muy importante
