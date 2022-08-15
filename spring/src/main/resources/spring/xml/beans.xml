@@ -4,18 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- default-init-method="inicio" default-destroy-method="destruye"> esto para q afecte a todos los beans q tengan esos métodos en sus POJO -->
 	
-	<bean class="com.johimesa.beans.BeanPostProcessorTest"></bean>
-	
-	<bean id="persona" class="com.johimesa.beans.Persona" autowire="byName">
-		<property name="alias" value="johimesa"></property>
+	<bean id="messi" class="com.johimesa.beans.Jugador">
+		<property name="number" value="1"></property>
+		<property name="name" value="Leonel Messi"></property>
+		<property name="team" ref="barcelona"></property>
 	</bean>
 	
-	<bean id="paiss" class="com.johimesa.beans.Pais">
-		<property name="name" value="Perú"></property>
-	</bean>
-	
-	<bean id="ciudad" class="com.johimesa.beans.Ciudad">
-		<property name="name" value="Lima"></property>
-	</bean>
+	<bean id="barcelona" class="com.johimesa.beans.Barcelona"></bean>
 	
 </beans>
