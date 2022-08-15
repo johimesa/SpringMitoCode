@@ -9,6 +9,16 @@ public class Persona {
 	private Pais paiss;
 	private Ciudad ciudad;
 	
+	private void inicio() {
+		System.out.println("Antes de iniciar el bean Persona");
+	}
+	
+	private void destruye() {
+		System.out.println("A punto de destruir el bean Persona");
+		// para q esto funcione la línea a continuación es muy importante
+		// ((ConfigurableApplicationContext)context).close();
+	}
+	
 	public int getId() {
 		return id;
 	}
