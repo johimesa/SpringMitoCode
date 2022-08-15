@@ -19,7 +19,8 @@ public class App {
 		// no puede haber 2 del mismo tipo x ej. private Ciudad ciudad1; private Ciudad ciudad2;), contructor (se define un 
 		// constructor con los parámetros
 		System.out.println(p);
-		
+		Persona p2 = (Persona)context.getBean("personaBean");
+		System.out.println(p2);
 		((ConfigurableApplicationContext)context).close();
 	}
 

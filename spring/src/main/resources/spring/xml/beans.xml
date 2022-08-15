@@ -3,13 +3,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" class="com.johimesa.beans.Persona" name="personaBean" autowire="byName">
+	<bean id="persona" class="com.johimesa.beans.Persona" name="personaBean" autowire="byName" scope="singleton">
 		<property name="id" value="1"></property>
 		<property name="name" value="Hilario"></property>
 		<property name="alias" value="johi"></property>
 	</bean>
 	
-	<bean id="pais" class="com.johimesa.beans.Pais">
+	<bean id="paiss" class="com.johimesa.beans.Pais">
 		<property name="name" value="Perú"></property>
 	</bean>
 	
