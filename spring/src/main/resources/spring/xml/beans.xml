@@ -3,8 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" class="com.johimesa.beans.Persona" name="personaBean" autowire="byName" scope="prototype">
-
+	<bean id="persona" class="com.johimesa.beans.Persona" name="personaBean" autowire="byName" scope="singleton" lazy-init="true">
+		
 	</bean>
 	
 	<bean id="paiss" class="com.johimesa.beans.Pais">
