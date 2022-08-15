@@ -11,5 +11,6 @@
 	</bean>
 	
 	<bean id="barcelona" class="com.johimesa.beans.Barcelona"></bean>
+	<bean id="juventus" class="com.johimesa.beans.Juventus"></bean>
 	
 </beans>
